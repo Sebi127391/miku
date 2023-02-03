@@ -1835,7 +1835,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  }
  break
 
- case 'listgc': case 'Gruppenchats': case 'mgrcl': case 'mgcl': case 'groups': case 'group' case 'gr': case 'grl': {
+ case 'listgc': case 'Gruppenchats': case 'mgrcl': case 'mgcl': case 'groups': case 'gr': case 'grl': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
@@ -2647,7 +2647,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'promote': {
+     case 'promote': case 'befördern': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2658,7 +2658,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'demote': {
+     case 'demote': case 'deagrieren': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2691,7 +2691,7 @@ let mentioned = participants.map(v => v.jid)
      break
 
 
-     case 'join': {
+     case 'join': case 'ojoin': case 'ajoin': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!isCreator) return replay(mess.botowner)
@@ -2820,7 +2820,7 @@ let mentioned = participants.map(v => v.jid)
             break
 
 
-case 'calculator': case 'cal': case 'calculate':{
+case 'calculator': case 'cal': case 'calculate': case 'rechnen': case 'rechne': case 'rechner': case 'Tschenrechner': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (args.length < 1) return reply(`*Example :*\n${prefix}calculator 2*5\n\n`)
@@ -2952,7 +2952,7 @@ case 'togif': case 'getgif':{
     }
     break
 
-case 'translate': case 'trans': {
+case 'translate': case 'trans': case 'tr': case 'übrrsetze': case 'übersetzen': case 'tl': {
     if (isBan) return reply(mess.banned)
     if (!args.join(" ")) return replay("Pls enter any text to translate")
     tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=en&kata=${args.join(" ")}`)
@@ -2991,7 +2991,7 @@ Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
 break
 
 
-case 'google': case 'search': {
+case 'google': case 'search': case 'suche': case 'gose': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args[0]) return reply(`Example: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
@@ -4722,7 +4722,7 @@ reply(mess.waiting)
 break
 
 
-case 'lyrics': case 'liedertext':{
+case 'lyrics': case 'liedertext': case 'liedtext': case 'songtext': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4808,7 +4808,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu': case 'hilfe
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-Ich bin *Miku Nakano*, ein von *Sebastian* entwickelter Bot.
+Ich bin *Miku Nakano*, ein von *Max* entwickelter Bot.
 
 🔰 Mein Präfix ist:  ${prefix}
 
@@ -4911,7 +4911,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
 
  『  *${global.BotName}*  』
- Powered by: *Sebastian*
+ Powered by: *Kirito*
 
  🔰 Um einen dieser Befehle zu verwenden, geben Sie ein
  " *${prefix}<Befehlsname>* ".
