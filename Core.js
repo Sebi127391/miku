@@ -1500,8 +1500,8 @@ case 'reaction': case 'react': case 'reactions': case 'r':
             reply(` *━━━〈  📍 Reactions 📍  〉━━━*\n\nbonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe`)
         break   
     
-case 'ping': case 'a2': case 'p': case 'a':
-        if (isBan) return reply(mess.banned)	 			
+case 'ping': case 'a2': case 'p': case 'a': case 'a3': case 'ping2': case 'ping3': case 'aping': case 'sysinfo': case 'syin': case 'syi': case 'systemi': case 'sysin': case 'syin': case 'sinfo': case 'speed': case 'speed1': case 'speed2': case 'speed3': case 'aspeed':
+	if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
             reply(` *「 System Info 」*\n
                 Speed : ${latensie.toFixed(4)} 
@@ -1511,6 +1511,10 @@ case 'ping': case 'a2': case 'p': case 'a':
 		𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
         break
 
+case 'user':
+        if (isBan) return reply(mess.banned)
+	if (isBanChat) return reply(mess.bangc)
+	
 case 'limituser': case 'userlimit': case 'limit':
             if (isBan) return reply(mess.banned)	 			
             if (isBanChat) return reply(mess.bangc)
