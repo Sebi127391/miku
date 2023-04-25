@@ -14,10 +14,10 @@ sudo apt install wget
 sudo apt install npm
 sudo apt install imagemagick
 
-git clone https://github.com/Sebi127391/Test32
+git clone https://github.com/Sebi127391/miku
 
 ls
-cd Test32 
+cd miku 
 npm i
 
 
@@ -32,7 +32,7 @@ curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 yarn add sharp
-cd Test32
+cd miku
 npm i
 npm start
 
